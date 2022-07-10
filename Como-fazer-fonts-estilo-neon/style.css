@@ -1,0 +1,54 @@
+@import url('http://fonts.cdnfonts.com/css/akira-expanded');
+
+:root{
+    --neon-text-color: #c80410;
+    --neon-border-color: #08f;
+}
+
+body{
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+h1{
+    color: #f1e5de;
+    font-size: 10rem;
+    font-family: 'Akira Expanded', sans-serif;
+    border: 0.1rem solid;
+    border-radius: 1rem;
+    padding: 2rem 4rem 2.5rem;
+    background-color: #181818;
+    letter-spacing: 0.2rem;
+    animation: luz 1.5s infinite alternate;
+}
+
+@keyframes luz{
+
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        
+        -webkit-text-stroke: 0.2px  #000 ;
+
+        text-shadow:
+            -0.2rem -0.2rem 1rem #181818,
+            0.1rem 0.1rem 0.1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 5rem var(--neon-text-color),
+            0 0 1rem var(--neon-text-color);
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 1rem var(--neon-border-color),
+            inset 0 0 1rem var(--neon-border-color),
+            0 0 3rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color);      
+    }
+    
+    20%, 24%, 55% { 
+        -webkit-text-stroke:none;  
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
